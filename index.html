@@ -6,19 +6,19 @@
   <title>My Favorite Links</title>
   <style>
     :root {
-      --bg: #f5f6f7;
       --card: #fff;
       --text: #111;
       --muted: #444;
       --link: #0a66c2;
       --radius: 12px;
       --shadow: 0 1px 3px rgba(0,0,0,.08), 0 6px 20px rgba(0,0,0,.06);
+      --overlay: rgba(255,255,255,0.85); /* semi-transparent background for readability */
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: var(--bg);
+      background: url('gordon%20clan%20modern%20tartan.png') center/cover no-repeat fixed;
       color: var(--text);
       line-height: 1.45;
     }
@@ -26,14 +26,14 @@
       max-width: 1100px;
       margin: 0 auto;
       padding: 32px 16px 64px;
+      background: var(--overlay);
+      border-radius: var(--radius);
     }
     h1 {
       text-align: center;
       margin: 8px 0 28px;
       font-size: clamp(28px, 3vw, 40px);
     }
-
-    /* Two-column layout */
     .grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -42,10 +42,6 @@
     @media (min-width: 820px) {
       .grid { grid-template-columns: 1fr 1fr; }
     }
-
-    .column {
-      background: transparent;
-    }
     .col-title {
       text-align: center;
       color: var(--muted);
@@ -53,7 +49,6 @@
       font-size: 20px;
       font-weight: 700;
     }
-
     ul {
       list-style: none;
       margin: 0;
@@ -66,7 +61,6 @@
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 14px 16px;
-      text-align: left;
     }
     a {
       color: var(--link);
@@ -85,32 +79,35 @@
 
     <section class="grid">
       <!-- LEFT: Work -->
-      <div class="column">
+      <div>
         <h2 class="col-title">Work</h2>
         <ul>
-          <li class="item"><a href="https://mail.google.com/mail/" target="_blank" rel="noopener">📧 Gmail</a></li>
-          <li class="item"><a href="https://www.google.com/calendar/" target="_blank" rel="noopener">📅 Google Calendar</a></li>
-          <li class="item"><a href="https://form10prod.service-now.com/" target="_blank" rel="noopener">🛠️ ServiceNow</a></li>
-          <li class="item"><a href="https://maps.google.com/" target="_blank" rel="noopener">🗺️ Google Maps</a></li>
-          <li class="item"><a href="https://workspace.google.com/products/sheets/" target="_blank" rel="noopener">📊 Google Sheets</a></li>
-          <li class="item"><a href="https://outlook.office.com/" target="_blank" rel="noopener">💼 Work Email</a></li>
-          <li class="item"><a href="https://docs.google.com/" target="_blank" rel="noopener">📄 Google Docs</a></li>
+          <li class="item"><a href="https://mail.google.com/mail/" target="_blank">📧 Gmail</a></li>
+          <li class="item"><a href="https://www.google.com/calendar/" target="_blank">📅 Google Calendar</a></li>
+          <li class="item"><a href="https://form10prod.service-now.com/" target="_blank">🛠️ ServiceNow</a></li>
+          <li class="item"><a href="https://maps.google.com/" target="_blank">🗺️ Google Maps</a></li>
+          <li class="item"><a href="https://workspace.google.com/products/sheets/" target="_blank">📊 Google Sheets</a></li>
+          <li class="item"><a href="https://outlook.office.com/" target="_blank">💼 Work Email</a></li>
+          <li class="item"><a href="https://docs.google.com/" target="_blank">📄 Google Docs</a></li>
+          <li class="item"><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">🎲 Random Wikipedia</a></li>
         </ul>
       </div>
 
       <!-- RIGHT: Personal -->
-      <div class="column">
+      <div>
         <h2 class="col-title">Personal</h2>
         <ul>
-          <li class="item"><a href="https://youtube.com/" target="_blank" rel="noopener">📺 YouTube</a></li>
-          <li class="item"><a href="https://chatgpt.com/" target="_blank" rel="noopener">🤖 ChatGPT</a></li>
-          <li class="item"><a href="http://www.amazon.com/" target="_blank" rel="noopener">🛒 Amazon</a></li>
-          <li class="item"><a href="https://www.audible.com/" target="_blank" rel="noopener">🎧 Audible</a></li>
-          <li class="item"><a href="https://www.nytimes.com/crosswords/game/mini" target="_blank" rel="noopener">🧩 NYT Mini Crossword</a></li>
-          <li class="item"><a href="https://xkcd.com/" target="_blank" rel="noopener">🎨 xkcd Comics</a></li>
+          <li class="item"><a href="https://youtube.com/" target="_blank">📺 YouTube</a></li>
+          <li class="item"><a href="https://chatgpt.com/" target="_blank">🤖 ChatGPT</a></li>
+          <li class="item"><a href="http://www.amazon.com/" target="_blank">🛒 Amazon</a></li>
+          <li class="item"><a href="https://www.audible.com/" target="_blank">🎧 Audible</a></li>
+          <li class="item"><a href="https://www.nytimes.com/crosswords/game/mini" target="_blank">🧩 NYT Mini Crossword</a></li>
+          <li class="item"><a href="https://xkcd.com/" target="_blank">🎨 xkcd Comics</a></li>
+          <li class="item"><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">🎲 Random Wikipedia</a></li>
         </ul>
       </div>
     </section>
   </main>
 </body>
 </html>
+
